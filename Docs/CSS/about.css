@@ -1,0 +1,43 @@
+#welcomep {
+    border: 1px solid black;
+    max-width: 80%;
+    margin:0 auto;
+}
+
+th, td{
+    max-width: 75%;
+    border: 1px solid black;
+    text-align: center;
+}
+
+table{
+    margin:0 auto;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+header , img {
+    max-width: 100%;
+}
+
+caption {
+    margin: 0.5% 0;
+    background-color: lightgray;
+}
+
+tr:nth-child(odd){
+    background-color: grey;
+}
+
+tr:nth-child(even){
+    background-color: lightgray;
+}
+
+th{
+    background-color: black;
+    color:white;
+}
+
+tr:hover{
+    background-color: yellow;
+}

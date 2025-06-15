@@ -1,0 +1,30 @@
+th, td{
+    max-width: 75%;
+    border: 1px solid black;
+    text-align: center;
+}
+
+th {
+    color: white;
+    background-color: black;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.promote > .size{
+    float:left;
+    max-width: 100%;
+    margin-bottom: 5%;
+}
+
+.promote {
+    width:100%;
+}
+
+.size {
+    display: inline-block;
+    width:45%;
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="author" content="Tommy,Chan Sing To"/>
+    <meta name="description" content="the information of Hong Kong Industrial University"/>
+    <meta name="keywords" content="Hong Kong Industrial University,Website"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Hong Kong Industrial University</title>
+    <link rel="stylesheet" type="text/css" href="./CSS/navigation.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="./CSS/HeadFoot.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="./CSS/program.css" media="all"/>
+</head>
+<body>
+<header>
+    <img src="./image/logo.png" width="400" height="100" alt="logo"/>
+    <h1>Hong Kong Industrial University</h1>
+</header>
+    <nav>
+        <a href="Home.html">Home</a> 
+        <a href="About.html">About</a> 
+        <a href="Apply.html">Apply</a> 
+        <a href="Visit.html">Visit</a> 
+        <a href="Program.html">Program</a> 
+        <a href="Contact.html">Contact</a>
+    </nav>
+    <h2 style="text-align: center;">Program</h2>
+    <div class="promote">
+        <h2 class="size"></h2>
+        <video class="size" controls="controls" autoplay></video>
+    </div>
+    <table>
+        <tr>
+            <th>College</th>
+            <th>Program</th>
+            <th>Duration</th>
+            <th>Language</th>
+            <th>Fee</th>
+        </tr>
+        <tr>
+            <td>College of Engineering</td>
+            <td>BSc in Computer Science and Technology</td>
+            <td>4 years</td>
+            <td>English</td>
+            <td>HK$42,100</td>
+        </tr>
+        <tr>
+            <td>College of Engineering</td>
+            <td>BEng in Electronic Information</td>
+            <td>4 years</td>
+            <td>English</td>
+            <td>HK$42,100</td>
+        </tr>
+        <tr>
+            <td>College of Engineering</td>
+            <td>BEng in Materials Science and Engineering</td>
+            <td>4 years</td>
+            <td>English</td>
+            <td>HK$42,100</td>
+        </tr>
+        <tr>
+            <td>College of Engineering</td>
+            <td>BEng in Materials and Chemicals</td>
+            <td>4 years</td>
+            <td>English</td>
+            <td>HK$42,100</td>
+        </tr>
+        <tr>
+            <td>College of Science</td>
+            <td>BSc in Physics</td>
+            <td>4 years</td>
+            <td>English</td>
+            <td>HK$42,100</td>
+        </tr>
+        <tr>
+            <td>College of Science</td>
+            <td>BSc in Chemistry</td>
+            <td>4 years</td>
+            <td>English</td>
+            <td>HK$42,100</td>
+        </tr>
+        <tr>
+            <td>College of Science</td>
+            <td>BSc in Biology</td>
+            <td>4 years</td>
+            <td>English</td>
+            <td>HK$42,100</td>
+        </tr>
+        <tr>
+            <td>College of Science</td>
+            <td>BSc in Cognitive Science</td>
+            <td>4 years</td>
+            <td>English</td>
+            <td>HK$42,100</td>
+        </tr>
+        <tr>
+            <td>College of Interdisciplinary Studies</td>
+            <td>BEng in Biomedical Engineering</td>
+            <td>4 years</td>
+            <td>English</td>
+            <td>HK$42,100</td>
+        </tr>
+        <tr>
+            <td>College of Interdisciplinary Studies</td>
+            <td>BEng in Electronics and Information Technology</td>
+            <td>4 years</td>
+            <td>English</td>
+            <td>HK$42,100</td>
+        </tr>
+        <tr>
+            <td>College of Interdisciplinary Studies</td>
+            <td>BEng in Biology and Medicine</td>
+            <td>4 years</td>
+            <td>English</td>
+            <td>HK$42,100</td>
+        </tr>
+    </table>
+<footer>
+    <img src="./image/footer_logo.png" width="300" height="100" alt="footer_logo"/>
+    <p>© CityU 2023 sources of images and text from Wikipedia Commons and
+        Courtesy of Icon pack by Icons8 -- designed by <a href="Design.html">Tommy Chan</a></p>
+</footer>
+<script>
+    var messages = ["Join Hong Kong Industrial University's College of Science for world-class education and research opportunities in science and technology! 20 QUOTAS LEFT!", "Join the future of engineering with Hong Kong Industrial University's College of Engineering, offering innovative programs and world-class faculty to prepare you for success in the field! 40 QUOTAS LEFT!", "Join the future of interdisciplinary studies with Hong Kong Industrial University's College of Interdisciplinary Studies, offering innovative programs and world-class faculty to prepare you for success in various fields! 30 QUOTAS LEFT!"
+    ];
+    function loopmessage(index){
+        var message = messages[index];
+        document.querySelector("h2.size").innerHTML = message;
+
+        setTimeout(function(){
+            var nextIndex = (index + 1) % messages.length;
+            loopmessage(nextIndex);
+        },3000);
+    }
+    var randomIndex = Math.floor(Math.random() * messages.length);
+    loopmessage(randomIndex);
+    var videoindex = 0;
+    var videoplay = document.querySelector("video.size");
+    var videos = ["https://personal.cs.cityu.edu.hk/~cs2204/2023/video/video1.mp4", "https://personal.cs.cityu.edu.hk/~cs2204/2023/video/video2.mp4"];
+    
+    function loopvideos(index){
+        var video = videos[index];
+        videoplay.src = video;
+        var nextvideo = (index + 1) % videos.length;
+        videoplay.addEventListener('ended', function() {
+        loopvideos(nextvideo);
+    })};
+    loopvideos(videoindex);
+</script>
+</body>
+</html>

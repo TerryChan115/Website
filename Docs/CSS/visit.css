@@ -1,0 +1,38 @@
+#visitwelcome > p{
+    text-align: center;
+}
+
+#location {
+    display: inline-block;
+    position: absolute;
+    top:0;
+    right:10%;
+}
+
+#img {
+    display: inline-block;
+}
+
+#img > img{
+    width:45%;
+    max-width: 100%;
+}
+
+h2{
+    text-align: center;
+}
+
+#form {
+    text-align: center;
+    width: 50%;
+    margin:0 auto;
+}
+
+form {
+    max-width: 100%;
+}
+
+#error_message {
+    color: red;
+    text-align: center;
+}

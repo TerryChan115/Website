@@ -1,0 +1,95 @@
+th, td {
+    border: 1px solid gray;
+}
+
+thead {
+    background-color: blueviolet ;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.even:hover{
+    background-color: yellow;
+}
+
+.odd:hover{
+    background-color: yellow;
+}
+
+.odd {
+    background-color: gainsboro;
+}
+
+.even {
+    background-color:antiquewhite;
+}
+.bottom1 {
+    background-color: white;
+}
+
+h4 {
+    width: calc(84.8%/3);
+    background-color: chartreuse;
+    border: 1px solid black;
+}
+
+table {
+    width:100%;
+}
+
+.submenu1 {
+    display:inline-block;
+}
+
+.submenu1, .submenu2, .submenu3{
+    max-width: 85%;
+}
+
+.submenu2, .submenu3{
+    display:none;
+}
+
+form {
+    width:100%;
+    border: 1px solid black;
+}
+
+.test{
+    width: 30%;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 5%;
+    padding: 1%;
+}
+
+.bottom1{
+    position: absolute;
+    top:-40px;
+    left:0;
+}
+
+.bottom2{
+    position: absolute;
+    top: -40px;
+    left: 28.37%;
+}
+
+.bottom3{
+    position: absolute;
+    top: -40px;
+    left:56.74%;
+}
+
+.test:hover{
+    background-color: lightgray;
+}
+
+.test > img{
+    max-width: 100%;
+}
+
+.test > input{
+    max-width: 95%;
+}

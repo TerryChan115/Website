@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="author" content="Tommy,Chan Sing To"/>
+    <meta name="description" content="the information of Hong Kong Industrial University"/>
+    <meta name="keywords" content="Hong Kong Industrial University,Website"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Hong Kong Industrial University</title>
+    <link rel="stylesheet" type="text/css" href="./CSS/navigation.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="./CSS/HeadFoot.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="./CSS/apply.css" media="all"/>
+    <link href="./CSS/PrintApply.css" media="print">
+</head>
+<body>
+<header>
+    <img src="./image/logo.png" width="400" height="100" alt="logo"/>
+    <h1>Hong Kong Industrial University</h1>
+</header>
+<div id="whole">
+    <nav>
+        <a href="Home.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Apply.html">Apply</a>
+        <a href="Visit.html">Visit</a>
+        <a href="Program.html">Program</a>
+        <a href="Contact.html">Contact</a>
+    </nav>
+    <p>Welcome to HKIU</p>
+    <h3>Common Application to Undergraduate Program</h3>
+    <br/>
+    <br/>
+<div style="position: relative;">
+    <div class="menu1">
+        <h4 class="bottom1" onclick="hideshow1()">College of Engineering</h4>
+        <form class="submenu1" method="get" action="#">
+            <div class="test">
+                <img src="./image/cs.png" width="200" height="200" alt="cs"/><br/>
+                <label for="CS">BSc in Computer Science and Technology</label><br/>
+                <input type="text" id="CS" name="CS" value="">
+                <button id="CS"type="button" onclick="addmajor('CS')">rank of choice</button>
+            </div>
+            <div class="test">
+            <img src="./image/ei.png" width="200" height="200" alt="ei"/><br/>
+            <label for="EI">BEng in Electronic Information</label><br/>
+            <input type="text" id="EI" name="EI" value="">
+            <button type="button" onclick="addmajor('EI')">rank of choice</button>
+            </div>
+            <div class="test">
+            <img src="./image/mse.png" width="200" height="200" alt="mse"/><br/>
+            <label for="MSE">BEng in Materials Science and Engineering</label><br/>
+            <input type="text" id="MSE" name="MSE" value="">
+            <button type="button" onclick="addmajor('MSE')">rank of choice</button>
+            </div>
+            <div class="test">
+            <img src="./image/mc.png" width="200" height="200" alt="mc"/><br/>
+            <label for="MC">BEng in Materials and Chemicals</label><br/>
+            <input type="text" id="MC" name="MC" value="">
+            <button type="button" onclick="addmajor('MC')">rank of choice</button>
+            </div>
+            <div class="test">
+            <img src="./image/est.png" width="200" height="200" alt="est"/><br/>
+            <label for="EST">BSc in Electronic Science and Technology</label><br/>
+            <input type="text" id="EST" name="EST" value="">
+            <button type="button" onclick="addmajor('EST')">rank of choice</button>
+            </div>
+        </form>
+        </div>
+        <div class="menu2">
+            <h4 class="bottom2" onclick="hideshow2()">College of Science</h4>
+        <form class="submenu2" method="get" action="#">
+            <div class="test">
+                <img src="./image/phy.png" width="200" height="200" alt="phy"/><br/>
+                <label for="PHY">BSc in Physics</label><br/>
+                <input type="text" id="PHY" name="PHY" value="">
+                <button type="button" onclick="addmajor('PHY')">rank of choice</button>
+            </div>
+            <div class="test">
+                <img src="./image/chem.png" width="200" height="200" alt="chem"/><br/>
+                <label for="CHEM">BSc in Chemistry</label><br/>
+                <input type="text" id="CHEM" name="CHEM" value="">
+                <button type="button" onclick="addmajor('CHEM')">rank of choice</button>
+            </div>
+            <div class="test">
+                <img src="./image/bio.png" width="200" height="200" alt="bio"/><br/>
+                <label for="BIO">BSc in Biology</label><br/>
+                <input type="text" id="BIO" name="BIO" value="">
+                <button type="button" onclick="addmajor('BIO')">rank of choice</button>
+            </div>
+        </form>
+        </div>
+        <div class="menu3">
+            <h4 class="bottom3" onclick="hideshow3()">College of Interdisciplinary Studies</h4>
+        <form class="submenu3" method="get" action="#">
+            <div class="test">
+            <img src="./image/cogs.png" width="200" height="200" alt="cogs"/><br/>
+            <label for="COGS">BSc in Cognitive Science</label><br/>
+            <input type="text" id="COGS" name="COGS" value="">
+            <button type="button" onclick="addmajor('COGS')">rank of choice</button>
+            </div>
+            <div class="test">
+            <img src="./image/be.png" width="200" height="200" alt="be"/><br/>
+            <label for="BE">BEng in Biomedical Engineering</label><br/>
+            <input type="text" id="BE" name="BE" value="">
+            <button type="button" onclick="addmajor('BE')">rank of choice</button>
+            </div>
+            <div class="test">
+            <img src="./image/bm.png" width="200" height="200" alt="bm"/><br/>
+            <label for="BM">BSc in Biology and Medicine</label><br/>
+            <input type="text" id="BM" name="BM" value="">
+            <button type="button" onclick="addmajor('BM')">rank of choice</button>
+            </div>
+        </form>
+        </div>
+</div>
+<br/>
+<br/>
+<br/>
+</div>
+<h2>Your chosen majors:</h2>
+<h3>7 Jul 2023 22:22</h3>
+<table id="choosemajor">
+    <thead>
+        <tr>
+            <th>College</th>
+            <th>Major</th>
+            <th>Rank</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="odd">
+            <td></td>
+            <td></td>
+            <td>1</td>
+        </tr>
+        <tr class="even">
+            <td></td>
+            <td></td>
+            <td>2</td>
+        </tr>
+        <tr class="odd">
+            <td></td>
+            <td></td>
+            <td>3</td>
+        </tr>
+        <tr class="even">
+            <td></td>
+            <td></td>
+            <td>4</td>
+        </tr>
+        <tr class="odd">
+            <td></td>
+            <td></td>
+            <td>5</td>
+        </tr>
+        <tr class="even">
+            <td></td>
+            <td></td>
+            <td>6</td>
+        </tr>
+        <tr class="odd">
+            <td></td>
+            <td></td>
+            <td>7</td>
+        </tr>
+        <tr class="even">
+            <td></td>
+            <td></td>
+            <td>8</td>
+        </tr>
+        <tr class="odd">
+            <td></td>
+            <td></td>
+            <td>9</td>
+        </tr>
+        <tr class="even">
+            <td></td>
+            <td></td>
+            <td>10</td>
+        </tr>
+    </tbody>
+</table>
+<h5>Total number of completed choices: 3</h5>
+<br/>
+<input type="submit" value="submit">
+<input type="reset" value="clear">
+<footer>
+    <img src="./image/footer_logo.png" width="300" height="100" alt="footer_logo"/>
+    <p>© CityU 2023 sources of images and text from Wikipedia Commons and
+        Courtesy of Icon pack by Icons8 -- designed by <a href="Design.html">Tommy Chan</a></p>
+</footer>
+<script>
+    var display1 = 1;
+    var display2 = 0;
+    var display3 = 0;
+    function hideshow1(){
+
+        if (display1 == 0 && (display2 == 1 || display3 == 1)){
+            document.querySelector(".submenu1").setAttribute('style', 'display:inline-block;');
+            document.querySelector(".bottom1").setAttribute('style', 'background-color: white;');
+            document.querySelector(".submenu2").setAttribute('style', 'display:none;');
+            document.querySelector(".bottom2").setAttribute('style', 'background-color: chartreuse;');
+            document.querySelector(".submenu3").setAttribute('style', 'display:none;');
+            document.querySelector(".bottom3").setAttribute('style', 'background-color: chartreuse;');
+            display1 = 1;
+            display2 = 0;
+            display3 = 0;
+        }
+    }
+    function hideshow2(){
+        if (display2 == 0 && (display1 == 1 || display3 == 1)){
+            document.querySelector(".submenu2").setAttribute('style', 'display:inline-block;');
+            document.querySelector(".bottom2").setAttribute('style', 'background-color: white;');
+            document.querySelector(".submenu1").setAttribute('style', 'display:none;');
+            document.querySelector(".bottom1").setAttribute('style', 'background-color: chartreuse;');
+            document.querySelector(".submenu3").setAttribute('style', 'display:none;');
+            document.querySelector(".bottom3").setAttribute('style', 'background-color: chartreuse;');
+            display2 = 1;
+            display1 = 0;
+            display3 = 0;
+        }
+    }
+    function hideshow3(){
+        if (display3 == 0 && (display1 == 1 || display2 == 1)){
+            document.querySelector(".submenu3").setAttribute('style', 'display:inline-block;');
+            document.querySelector(".bottom3").setAttribute('style', 'background-color: white;');
+            document.querySelector(".submenu1").setAttribute('style', 'display:none;');
+            document.querySelector(".bottom1").setAttribute('style', 'background-color: chartreuse;');
+            document.querySelector(".submenu2").setAttribute('style', 'display:none;');
+            document.querySelector(".bottom2").setAttribute('style', 'background-color: chartreuse;');
+            display3 = 1;
+            display1 = 0;
+            display2 = 0;
+        }
+    }
+    function getCollegeName(major) {
+  var college = "";
+
+  if (major.includes("CS") || major.includes("EI") || major.includes("MSE") || major.includes("MC") || major.includes("EST")) {
+    college = "College of Engineering";
+  } else if (major.includes("PHY") || major.includes("CHEM") || major.includes("BIO")) {
+    college = "College of Science";
+  } else if (major.includes("COGS") || major.includes("BE") || major.includes("BM")) {
+    college = "College of Interdisciplinary Studies";
+  }
+
+  return college;
+}
+    function addmajor(major){
+        var first = document.querySelector('label[for="' + major + '"]').textContent;
+        var second = document.getElementById(major).value;
+        var third = getCollegeName(major);
+        alert("You have chosen "+ first +" as your "+ second +" chosen major in "+ third + " successfully");
+        var table = document.getElementById('choosemajor').rows[(second)].cells;
+        table[0].innerHTML= third;
+        table[1].innerHTML= first;
+    };
+    function getrank(){
+        var table = document.getElementById('choosemajor').rows[(second)].cells;
+        return table[2];
+
+    }
+    function checkDuplicateMajor(){
+
+    }
+
+    function checkDuplicateRank(){
+
+    }
+
+    let rank_input = getrank();
+    if (isIntegerInput(rank_input) === false){
+        alert("Please enter the rank of chosen major");
+    }
+    let rank = parseInt(rank_input);
+
+    if (rank < 1 || rank > 10){
+        alert("Please enter the rank of chosen major between 1 and 10");
+    }
+    for (let i = 1; i <= 10; i++){
+        if (checkDuplicateMajor() === true) {
+            alert("You have already chosen this major");
+        }
+        if (checkDuplicateRank() === true){
+            alert("You have already chosen this rank");
+        }
+    }
+
+</script>
+</body>
+</html>

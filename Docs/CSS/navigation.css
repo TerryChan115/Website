@@ -1,0 +1,30 @@
+nav > a:link {
+    color:yellow;
+}
+
+nav > a:visited {
+    color:aqua;
+}
+
+nav > a:hover {
+    color:red;
+}
+
+nav > a:active {
+    color:rgb(255, 112, 112);
+}
+
+nav {
+    display:block;
+    background-color: black;
+    height: 2em;
+    width:auto;
+    padding-top: 0.9em;
+}
+
+nav > a{
+    display: inline-block;
+    text-decoration: none;
+    width: 3%;
+    text-align: center;
+}

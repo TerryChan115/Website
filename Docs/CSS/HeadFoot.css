@@ -1,0 +1,16 @@
+header {
+    background-color:lightsalmon;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 0%;
+    padding-bottom: 2em;
+}
+
+footer {
+    text-align: center;
+    background-color:plum;
+    width:auto;
+}
+

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="author" content="Tommy,Chan Sing To"/>
+    <meta name="description" content="the information of Hong Kong Industrial University"/>
+    <meta name="keywords" content="Hong Kong Industrial University,Website"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Hong Kong Industrial University</title>
+    <link rel="stylesheet" type="text/css" href="./CSS/navigation.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="./CSS/HeadFoot.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="./CSS/visit.css" media="all"/>
+</head>
+<body>
+    <script src="https://personal.cs.cityu.edu.hk/~cs2204/2023/cw3cs2204.js"></script>
+    <header>
+        <img src="./image/logo.png" width="400" height="100" alt="logo"/>
+        <h1>Hong Kong Industrial University</h1>
+    </header>
+    <nav>
+        <a href="Home.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Apply.html">Apply</a>
+        <a href="Visit.html">Visit</a>
+        <a href="Program.html">Program</a>
+        <a href="Contact.html">Contact</a>
+    </nav>
+    <div id="visitwelcome">
+        <p>We warmly welcome you to visit us at our Kowloon campus and experience our vibrant learning community. Our campus is located in the Hong Kong Kowloon High-Tech Park, where we collaborate closely with institutes of the Chinese Academy of Sciences.</p>
+        <br/>
+        <p>During your visit, you can explore our world-class facilities, including the Protein Folding Science Center, Hong Kong Advanced Computing Equipment, Hong Kong Ultrafast Laser Facility, Hong Kong Electron-Positron Collider, and Hong Kong Supercomputer Facility. These facilities are available to our faculty, students, and researchers worldwide.</p>
+        <br/>
+        <p>You will also have the chance to meet our renowned scholars and experts from home and abroad committed to providing students with cutting-edge knowledge and skills in their respective fields. Our faculty members are recognized leaders in their fields, and their research has been published in prestigious journals such as Cell, Nature, and Science.</p>
+        <br/>
+        <p>We hope you will come and visit us soon to experience firsthand the dynamic and innovative community at Hong Kong Industrial University.</p>
+        <br/>
+    </div>
+    <div style="position: relative;">
+        <div id="img">
+            <img src="./image/location.jpg" width="800" alt="location"/>
+        </div>
+        <div id="location">
+            <h2>Location</h2>
+            <p>Address: Tat Chee Avenue, Kowloon, Hong Kong SAR</p>
+            <p>Tel: (852) 1234 5678</p>
+            <p>Fax: (852) 8765 4321</p>
+            <p>Email: visit@hkiu.edu.hk</p>
+        </div>
+    </div>
+        <br/>
+        <h2>Hong Kong Industrial University is having an open day on campus! Please make a reservation to visit our campus!</h2>
+<div id="form">
+    <form id="form1">
+        <fieldset>
+            <legend>Booking information:</legend>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" value=""/><br/><br/>
+            <label for="time">Time:</label>
+            <select id="time" name="time">
+                <option value="optionA">8:30-9:30am</option>
+                <option value="optionB">9:30-10:30am</option>
+                <option value="optionC">10:30-11:30am</option>
+                <option value="optionD">1:30-2:30pm</option>
+                <option value="optionE">2:30-4:00pm</option>
+                <option value="optionF">4:00-5:00pm</option>
+            </select>
+            <br/><br/>
+            <label for="no">No.of Visitors:</label>
+            <input type="text" id="no" name="number_visitors" value=""/>
+            <div id="error_message"></div>
+            <br>
+            <input type="submit" name="submit" value="Check Availability">
+            <input type="reset" name="submit" value="Reset"/>
+    </fieldset>
+</form>
+</div>
+<footer>
+    <img src="./image/footer_logo.png" width="300" height="100" alt="footer_logo"/>
+    <p>© CityU 2023 sources of images and text from Wikipedia Commons and
+        Courtesy of Icon pack by Icons8 -- designed by <a href="Design.html">Tommy Chan</a></p>
+</footer>
+<script>
+    document.getElementById("form1").addEventListener("submit", function validcheck(){
+        var date = document.getElementById("date").value;
+        var time = document.getElementById("time").value;
+        var no = document.getElementById("no").value;
+
+        if ((date == null || date == "") || (time == null || time == "") || (no == null || no == "")) {
+            event.preventDefault();
+            document.getElementById("error_message").innerHTML = "<p>Data not completed; please re-enter</p>";
+        } 
+        else if (no <= 0 || !Number.isInteger(Number(no))) {
+            event.preventDefault();
+            document.getElementById("error_message").innerHTML = "<p>Please enter a valid number of people!</p>";
+        } 
+        else {
+            document.getElementById("error_message").innerHTML = "";
+            var full = reserve(date, time, no);
+            if (full){
+                alert("Your reservation is successful!");
+            }
+            else {
+                alert("Sorry, the reservation is full!");
+            }
+        }
+
+
+    });
+
+</script>
+</body>
+</html>
